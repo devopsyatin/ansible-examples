@@ -1,0 +1,13 @@
+---
+- name: run setup only and do nothing
+  hosts: all
+  gather_facts: true
+
+  tasks:
+
+    - name: show me an ansible variable
+      debug:
+        var: ansible_hostname
+        
+    - name: check ansible version
+      shell: ansible --version
